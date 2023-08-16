@@ -1,0 +1,83 @@
+@import "style";
+//sidebar
+.container {
+  max-width: 340px;
+  width: 100%;
+  height: 100vh;
+  color: white;
+
+  //sidebar Menu
+  .sidebar {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    @include bg-color(rgba(255, 255, 255, 0.3));
+    height: 95vh;
+    @include box-shadow(0px 8px 32px 0px, rgba(31, 38, 135, 0.37));
+    @include margin(20px auto);
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    //  title menu
+    .title_menu {
+      @include margin(20px auto 0 20px);
+
+      ul {
+        list-style: none;
+        @include margin(20px 0 0 0);
+
+        li {
+          @include font(16px, $color: white);
+          @include padding(0 0 20px 0);
+          @include margin(0 0 30px 0);
+          display: flex;
+          align-items: center;
+
+          .mail_icon {
+            display: block;
+            padding-right: 5px;
+          }
+        }
+      }
+    }
+
+    .button_close_menu {
+      width: 310px;
+      transition: 0.5s;
+      transition-duration: 0.5s;
+      .sidebar_open {
+        @include font(30px, #fff);
+        display: block;
+        float: right;
+        padding-top: 10px;
+        cursor: pointer;
+
+        &::before {
+          content: "⚝";
+        }
+      }
+
+      .sidebar_close {
+        @include font(30px, #fff);
+        display: block;
+        &::after {
+          content: "Ψ";
+          @include padding(20px);
+          cursor: pointer;
+          transition: 0.6s;
+        }
+      }
+    }
+  }
+}
+.icon_container {
+  display: flex;
+  align-items: center;
+
+  span {
+    display: block;
+    padding-left: 10px;
+  }
+}

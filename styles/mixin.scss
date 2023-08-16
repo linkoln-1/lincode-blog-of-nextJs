@@ -1,0 +1,22 @@
+ @mixin padding($padding: 0) {
+   padding: $padding;
+ }
+
+ @mixin margin($margin: 0) {
+     margin: $margin;
+ }
+
+ @mixin bg-color($bg) {
+   background-color: $bg;
+ }
+
+ @mixin box-shadow($box-shadow, $color: black) {
+   box-shadow: $box-shadow $color;
+ }
+ @mixin font($fontS: 18px, $color: black, $fontW: 400) {
+   font-size: $fontS;
+   font-weight: $fontW;
+   color: $color;
+ }
+
+
